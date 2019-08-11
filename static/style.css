@@ -1,0 +1,60 @@
+.dark {
+    color: #2C2F33;
+}
+
+.dark_background {
+    background-color: #2C2F33;
+}
+
+.discord_button {
+    background-color: #7289da;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 15px 25px;
+    position: relative;
+    -webkit-transition: all .12s ease-out;
+    transition: all .12s ease-out;
+    top: 0;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    width: 200px;
+    margin: 10px;
+}
+
+.discord_button:hover {
+    box-shadow: 2px 4px 5px #888888;
+}
+
+.discord_button:focus {
+    outline: 0;
+    background-color: #667bc3;
+}
+
+.fonts {
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+.box {
+    background-color: #FFF;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: min-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        top: 100%;
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+        top: 50%;
+    }
+}

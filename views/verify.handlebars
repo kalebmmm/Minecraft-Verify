@@ -1,0 +1,27 @@
+<img src="{{serverIcon}}"></img>
+<p style="font-size: 18px">{{serverName}}</p>
+
+<form id="verifyForm" action='/verify/submit' method="POST">
+    <input name="serverID" type="hidden" value={{serverId}}>
+    <div class="g-recaptcha" data-sitekey="6LdpKbIUAAAAAAGgV4MKX554GgwE6QYwS8imhJZC"></div>
+    <input type="submit" class="discord_button" value="VERIFY ME">
+</form>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#verifyForm').submit(function () {
+            $(this).ajaxSubmit({
+                error: function (xhr) {
+                    status('Error: ' + xhr.status);
+                },
+                success: function (response) {
+                    console.log(response);
+                }
+            });
+            return false;
+        });
+    });
+</script>
